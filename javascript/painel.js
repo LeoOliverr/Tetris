@@ -18,8 +18,7 @@ class Painel {
 				//retorna se a posição não está ocupada(vazia)
 					this.grid[y] && this.grid[y][x] === 0 ||
 					//ou se está nos limites do painel E acima do chão
-					(x >= 0 && x < COLUNA &&
-					 y <= LINHA)
+					(x >= 0 && x < COLUNA && y <= LINHA)
 				);
 			});
 		});

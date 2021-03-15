@@ -14,7 +14,7 @@ class Peca {
 	}
 desenho(){
 	//define a cor de preenchimento
-	this.ctx.fillStyle =this.color;
+	this.ctx.fillStyle = this.color;
 	this.shape.forEach((row, y) => {
 		row.forEach((value, x) => {
 		//this.x, this.y determinam a posição esquerda e superior da peça
@@ -31,10 +31,4 @@ mover(p){
 	this.x = p.x;
 	this.y = p.y;
 }
-
-
-
-
-
-
 }
