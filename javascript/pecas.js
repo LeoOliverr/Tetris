@@ -5,6 +5,7 @@ class Peca {
 	forma;
 	ctx;
 	idTipo;
+	
 	constructor(ctx){
 		this.ctx = ctx;
 		this.spawn();
@@ -14,7 +15,7 @@ setPosicaoInicial(){
 }
 spawn(){
 	this.idTipo = this.randomizePeca(CORES.length - 1);
-	this.shape = FORMAS[this.idTipo];
+	this.forma = FORMAS[this.idTipo];
 	this.color = CORES[this.idTipo];
 	this.x = 0;
 	this.y = 0;
@@ -23,7 +24,7 @@ spawn(){
 desenho(){
 	//define a cor de preenchimento
 	this.ctx.fillStyle = this.color;
-	this.shape.forEach((row, y) => {
+	this.forma.forEach((row, y) => {
 		row.forEach((value, x) => {
 		//this.x, this.y determinam a posição esquerda e superior da peça
 		//x, y determina a posição do bloco na forma

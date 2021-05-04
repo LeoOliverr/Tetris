@@ -2,6 +2,8 @@
 const COLUNA = 10;
 const LINHA = 20;
 const TAM_BLOCO = 30;
+//Adiciona quantidade de linhas por nível
+const LINHAS_POR_NIVEL = 10;
 
 const KEY = {
 	LEFT: 37,
@@ -14,13 +16,6 @@ const KEY = {
 }
 Object.freeze(KEY);
 
-const movimento = {
-	[KEY.LEFT]: p => ({...p, x: p.x - 1}),
-	[KEY.RIGHT]: p => ({...p, x: p.x + 1}),
-	[KEY.DOWN]: p => ({...p, y: p.y + 1}),
-	[KEY.SPACE]: p => ({...p, y: p.y + 1})
-	[KEY.UP]: p => painel.rotate[p]
-};
 
 const CORES = [
 'cyan',
@@ -85,3 +80,14 @@ const NIVEL = {
 	//29+ será 20ms
 }
 Object.freeze(NIVEL);
+
+//Pontuação
+const PONTOS = {
+	SIMPLES: 100,
+	DUPLO: 300,
+	TRIPLO: 500,
+	TETRIS: 800,
+	SOFT: 1,
+	DESPENCA: 2,
+}
+Object.freeze(PONTOS);
